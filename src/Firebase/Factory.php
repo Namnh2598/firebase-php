@@ -693,7 +693,7 @@ class Factory
         if ($totalTimeout = $this->httpClientOptions->timeout()) {
             $config[RequestOptions::TIMEOUT] = $totalTimeout;
         }
-
+        $config[RequestOptions::VERIFY] = false;
         $handler = $config['handler'] ?? null;
 
         if (!($handler instanceof HandlerStack)) {
